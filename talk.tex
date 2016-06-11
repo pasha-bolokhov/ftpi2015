@@ -1,0 +1,713 @@
+\documentclass{beamer}
+
+\include{mathdefs}
+\newcommand{\cp}{$\text{CP}^{N-1}$\,\,}
+
+\usefonttheme{serif}
+\usetheme{AnnArbor}
+
+\setbeamertemplate{background canvas}[vertical shading][bottom=yellow!80,top=yellow!30]
+\setbeamertemplate{blocks}[rounded][shadow=true]
+
+\setbeamercolor{normal text}{fg=blue!80}
+\setbeamercolor{alerted text}{fg=orange!90}
+\setbeamercolor{math text}{fg=red!90}
+
+\title[Effective Action of \cp]
+      {Low-Energy Effective Action\\
+       of \cp Model at large $ N $}
+
+\author{Pavel A. Bolokhov}
+
+\date{April 3, 2015}
+
+\institute[SFU \& SPbSU]{FTPI ~~$\cdot$~~ University of Minnesota}
+
+\begin{document}
+
+\maketitle
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Introduction}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{}
+\usefont{T1}{ptm}{m}{n}\fontsize{60pt}{60pt}\selectfont
+\begin{center}
+        Introduction
+\end{center}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Bosonic theory}
+
+	We address the task of solving the two-dimensional \cp theory
+
+	The non-supersymmetric \cp describes a complex vector 
+\[
+	n^l\,,\qquad\qquad l ~=~ 1\,,\, ...\,,\, N
+\]
+	subject to the identification
+\[
+	\vec{n} ~~\sim~~ \lambda\, \vec{n}\,,
+	\qquad\qquad \lambda ~\in~ \mathcal{C}
+\]
+
+	In the physical setting $ \vec{n} $ arises as {\it orientational} moduli 
+	living on the worldsheet of non-Abelian vortices (with a gauge group SU($ N $))
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{}
+
+	The {\it gauge} formulation for such a theory was introduced by Witten
+\[
+ 	\mc{L} ~~=~~
+		\,\frac{1}{4e^2}\,F_{kl}^2  ~+~  \frac{1}{2e^2}\, D^2  ~+~
+		\big| \nabla n \big|^2  ~+~  iD \big(\, \big|n^l \big|^2 - 2\beta \,\big)
+\]
+
+	where 
+\[
+	\nabla_k\, n^l  ~~=~~  \left(\, \p_k ~-~ i\,A_k \,\right)\, n^l
+\]
+	In the limit $ e \,\to\, \infty $ resolution of $ A_k $ and $ D $ imposes
+	the CP$^{N-1}$ constraint $ \vec{n} ~\sim~ \lambda\, \vec{n} $
+
+	One of $ n^l $ components can be expressed in terms of the other $ N - 1 $,
+	and put to an arbitrary phase --- {\it e.g.} set {\it real}
+\[
+	\mc{L}  ~~=~~  \big|\, \p\, n \,\big|^2  ~+~  \big(\, \ov{n}\, \p_k \, n \,\big)^2\,,
+	\qquad\qquad l ~=~ 1\,,\, ...\,,\, N-1
+\]
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{\ntwot Supersymmetric Theory}
+
+\begin{align}
+% 
+\notag
+ 	\mc{L}_\text{(2,2)} & ~~=~~
+	\,\frac{1}{4e^2}\,F_{kl}^2  ~+~ \frac{1}{e^2} \big|\p_k \sigma\big|^2 
+	~+~ \frac{1}{2e^2}\, D^2 ~+~
+	\\[2mm]
+%
+\notag
+	&
+	~~+~~
+	\frac{1}{e^2}\, \blar\, i\p_L\, \lar  ~+~  \frac{1}{e^2} \blal\, i\p_R\, \lal
+	~+~
+	\\[2mm]
+%
+\notag
+	&
+	~~+~~
+	\big| \nabla n \big|^2  ~+~ | \sqrt{2}\sigma |^2 \big| n^l \big|^2
+	~+~ iD \big( \big|n^l \big|^2 - 2\beta \big)
+	~+~
+	\\[2.8mm]
+%
+\notag	&
+	~~+~~ \bxir\, i\nabla_L \xir  ~+~ \bxil\, i\nabla_R \xil ~+~
+	i\sqrt{2}\sigma\, \bxir \xil
+	~+~ i\sqrt{2}\ov{\sigma}\, \bxil \xir
+	~+~
+	\\[2.8mm]
+%
+\notag
+	&
+	~~+~~ i\sqrt{2}\, \ov{\xi_{[R}\, \lambda}{}_{L]}\, n
+	~-~ i\sqrt{2}\, \nbar\,  \lambda_{[R}\, \xi_{L]}\,,
+	\qquad
+	l  ~=~  1,\,...\,N
+\end{align}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{The Exact Superpotential}
+	
+	This theory is known to have an exact {\it Veneziano-Yankielowicz} type
+	superpotential
+\[
+	\int\, 	d\theta_R\, d\bar\theta_L \left( \sqrt{2}\Sigma\, \log \sqrt{2}\Sigma ~-~  
+					         \sqrt{2}\Sigma \right)
+\]
+	also known as {\it Witten} superpotential,
+	where $ \Sigma $ is a {\it twisted} superfield
+\[
+	\Sigma     ~~=~~    \sigma  ~~-~~  \sqrt{2}\, \theta_R \ov\lambda{}_L
+				    ~~+~~  \sqrt{2}\, \ov\theta{}_L \lambda_R
+				    ~~+~~  \sqrt{2}\, \theta_R \ov\theta{}_L \lgr D ~-~ i\, F_{03} \rgr
+\]	
+	and
+\[
+	\Sigma    ~~=~~    \frac{i}{\sqrt 2}\, D_L\, \ov D{}_R\, V
+\]
+
+	We show that at large $ N $ one can do better than just superpotential
+
+\end{frame}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{The Effective Potential}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{}
+\usefont{T1}{ptm}{m}{n}\fontsize{60pt}{60pt}\selectfont
+\begin{center}
+        The Effective Potential
+\end{center}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{The Effective Scalar Potential}
+
+	In {\sc M.Shifman, A.Yung arXiv:0803.0698} the effective scalar potential
+	was found at large $ N $,
+
+\begin{align*}
+%
+	V_\text{eff}  &  ~~=~~    -\, \frac{N}{4\pi} 
+	\bigg\{
+		\big( \big|\sqrt{2}\sigma\big|^2 \,+\, iD \big) 
+		\log \big( \big|\sqrt{2}\sigma\big|^2 \,+\, iD \big)
+		~-~
+	\\
+%
+	&
+	\qquad\qquad~
+		~-~
+		iD
+		~-~
+		\big|\sqrt{2}\sigma\big|^2 \log \big|\sqrt{2}\sigma\big|^2
+	\bigg\}
+\end{align*}
+
+	Elimination of $ D $ leads to 
+\[
+	V_\text{eff}   ~~=~~ \frac{N}{4\pi}
+	\bigg\{\,
+		1 ~+~  \big|\sqrt{2}\sigma\big|^2\, \Big(\, \log \big|\sqrt{2}\sigma\big|^2 \,-\, 1 \,\Big)
+	\,\bigg\}
+\]
+	This clearly does not fit into the $ \Sigma \, \log \Sigma $ picture!
+
+\end{frame}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Supersymmetric Form}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{}
+\usefont{T1}{ptm}{m}{n}\fontsize{50pt}{50pt}\selectfont
+\begin{center}
+        Supersymmetric Form
+\end{center}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Supersymmetrizing}
+	What is the supersymmetric form of these expressions?
+
+	First, scatter them into series in
+\[
+	x    ~~=~~    \frac{iD}{\big|\sqrt{2}\sigma\big|^2}
+\]
+	as $ iD $ is naturally the supersymmetry breaking parameter,
+\[
+	 \frac{4\pi}{N}\, V_\text{eff}    ~~=~~
+		x\, \big|\sqrt{2}\sigma\big|^2 \lgr -\, \ln\, \big|\sqrt{2}\sigma\big|^2 ~+~
+		\sum_{k \geq 1}\, \frac{(-1)^k} 
+                                      { k\,(k + 1) }\, x^k \rgr
+\]
+	Another representation is
+\[
+	- iD\, \ln \big|\sqrt{2}\sigma\big|^2 ~~+~~ \big|\sqrt{2}\sigma\big|^2\, \int_0^x \ln\, (1 + x)\, dx
+\]
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{}
+
+	Now we can promote $ x $ to superfields,
+\[
+	x    ~~=~~    \frac{iD}{\big|\sqrt{2}\sigma\big|^2}    ~~~~\longrightarrow~~~~
+		\frac{S}{\sqrt{2}\Sigma}
+\]
+	where 
+\[
+	S    ~~=~~    \frac{i}{2}\,\ov D{}_R D_L \ln \sqrt{2}\ov\Sigma
+\]
+	and the lowest part of $ S \,/\, \Sigma $ is
+\[
+	\frac{S}{\sqrt{2}\Sigma} \bigg|    ~~=~~
+		\frac{1}{\big|\sqrt{2}\sigma\big|^2}
+		\lgr
+			iD \,-\, F_{03}
+			~~-~~
+			\frac{2\, i\sqrt{2}\sigma \ov\lambda{}_R\lambda_L}{\big|\sqrt{2}\sigma\big|^2}
+		\rgr
+\]
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{}
+
+	So we re-design the series in terms of superfields now
+	(not straightforward)
+\[
+	\frac{i}{2}\, 
+	\int\, d^2\tilde\theta\,
+	S\,
+	\sum_{k \geq 1}\, \frac{    (-1)^k    }
+			   {  k\,(k + 1)\,(k + 2)  } \lgr \frac{S}{\sqrt{2}\Sigma} \rgr^k
+\]
+
+	This reproduces the original series 
+\[
+		x\, \big|\sqrt{2}\sigma\big|^2\,
+		\sum_{k \geq 1}\, \frac{(-1)^k} 
+                                      { k\,(k + 1) }\, x^k 
+\]
+	but the first term
+\[
+	-\, \frac{1}{2}\, \big|\sqrt{2}\sigma\big|^2\, x^2   ~~=~~  \frac{1}{2}\,\frac{D^2}{\big|\sqrt{2}\sigma\big|^2}
+\]
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Superkinetic term}
+	This $ D^2 $ term comes from what we call a {\it superkinetic term}
+
+\[
+	\frac{1}{2}\,\frac{D^2}{\big|\sqrt{2}\sigma\big|^2}  ~~~\in~~~
+	-\, \int\, d^4\theta\, \frac{1}{2}\, \Big| \ln \sqrt{2}\Sigma \, \Big|^2
+\]
+
+	Aside of $ D^2 $ it also contains the kinetic terms for $ F_{ik} $, $ \lambda $ and $ \sigma $
+
+	The existence of this term has been known as far back as in\\
+	{\sc A.~D'Adda, A.~.C.~Davis, P.~Di~Vecchia and P.~Salomonson,\\
+	     Nucl. Phys. B 222, 45 (1983)}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{}
+	Putting together this superkinetic term, the Witten's potential
+	and converting our series into a logarithm in a $ D $-term form,
+
+\begin{align*}
+%
+	&
+	\frac{4\pi}{N}\, \cell    ~~=~~     
+			-\,
+			\int\, d^4\theta\, \frac{1}{2}\, \Big| \ln \sqrt{2}\Sigma \, \Big|^2
+			~~-~~
+			i \int\, d^2\tilde\theta 
+			\lgr
+			\sqrt{2}\Sigma\, \ln \sqrt{2}\Sigma  ~-~ \sqrt{2}\Sigma
+			\rgr
+			~~-
+	\\
+%
+			&
+			-~~ 
+			\frac{1}{4} \int\, d^4\theta\,
+			\ln\, \sqrt{2}\ov\Sigma
+			\lgr \Big( 1 \,+\, \frac{\sqrt{2}\Sigma}{S} \Big)^2\,
+				\ln \Big(\, 1 \,+\, \frac{S}{\sqrt{2}\Sigma} \,\Big) ~-~
+				\frac{\sqrt{2}\Sigma}{S} \rgr\!\!
+			~+~ \text{h.c.}
+\end{align*}
+
+	Its component expansion is quite huge
+
+	But the {\it constant} bosonic part of it does exactly become
+\begin{align*}
+%
+	&
+		-\, \big( \big|\sqrt{2}\sigma\big|^2 \,+\, iD \big) 
+		\log \big( \big|\sqrt{2}\sigma\big|^2 \,+\, iD \big)
+		~+~
+		iD
+		~+~
+		\big|\sqrt{2}\sigma\big|^2 \log \big|\sqrt{2}\sigma\big|^2
+		~~=
+	\\
+%
+	& =~~
+	- iD\, \ln \big|\sqrt{2}\sigma\big|^2 ~~+~~ \big|\sqrt{2}\sigma\big|^2\, \int_0^x \ln\, (1 + x)\, dx
+\end{align*}
+
+\end{frame}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Component form}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{}
+\usefont{T1}{ptm}{m}{n}\fontsize{60pt}{60pt}\selectfont
+\begin{center}
+        Component form
+\end{center}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Component expansion}
+
+	We can think of the effective action by limiting to only {\it two}
+	space-time derivatives -- this will yield a much more tractable expression\\[4mm]
+
+	So we keep {\it all} powers of the auxiliary field $ D $, while
+	retaining only {\it two} powers of the derivatives of {\it physical} fields
+	$ \sigma $, $ \lambda $, $ A_k $\\[4mm]
+
+	In that, we think of fermions as already having half a derivative
+\end{frame}
+
+
+\begin{frame}{}
+\vskip -4mm
+{\footnotesize
+\begin{align*}
+%
+	\frac{4\pi}{N}\, \cell_\text{two deriv} &    ~~=~~  
+	\frac{ \big|\p_\mu \sigma\big|^2 }
+	{ \big|\sqrt{2}\sigma\big|^2 }
+	~~-~~
+	F_{03}\, \log\, \frac{\sqrt{2}\sigma}{\sqrt{2}\ov\sigma}
+	~~+~~
+	\frac{4\pi}{N}\, V_\text{eff}
+	~~-
+	\\[2mm]
+%
+	&
+	~~-~~
+	\frac{F_{03}^2}{\big|\sqrt{2}\sigma\big|^2}
+	\lgr 2\, \frac{ \ln (1 + x) \,-\, x } { x^2 }  ~+~
+		\frac{1}{2}\, \frac{1}{1 \,+\, x} \rgr
+	~~-
+	\\[2mm]
+%
+	&
+	~~-~~
+	\frac{
+		\ov\lambda{}_R\, i\overleftrightarrow{\md_L} \lambda_R  ~+~ 
+		\ov\lambda{}_L\, i\overleftrightarrow{\md_R} \lambda_L
+	} { \big|\sqrt{2}\sigma\big|^2 }
+	\,
+	\frac{ \ln (1 + x) \,-\, x } { x^2 }
+	~~-
+	\\[2mm]
+%
+	&
+	~~-~~ 
+	2\,\frac{
+		i\sqrt{2}\sigma\ov\lambda{}_R\lambda_L  ~+~  
+		i\sqrt{2}\,\ov{\sigma\lambda}{}_L\lambda_R
+	} { \big|\sqrt{2}\sigma\big|^2 }\,
+	\frac{ \ln (1 + x) } { x }
+	~~+
+	\\[2mm]
+%
+	&
+	~~+~~
+	4\,\frac{
+		\ov\lambda{}_R \lambda_L \ov\lambda{}_L \lambda_R
+	} { \big|\sqrt{2}\sigma\big|^4 }\,
+	\lgr \frac{ \ln (1 + x) \,-\, x } { x^2 }  ~+~
+		\frac{1}{1 \,+\, x} \rgr
+	~~+
+	\\[2mm]
+%
+	&
+	~~+~~
+	\frac{1}{4}\,\Box\,\log |\sqrt{2}\sigma|^2 \cdot
+	\frac{ (1 - x^2) \ln (1 + x) \,-\, x } { x^2 }
+	~~-
+	\\[3mm]
+%
+	&
+	~~-~~
+	2\,\frac{ F_{03} \big( i\sqrt{2}\sigma\ov\lambda{}_R\lambda_L ~-~
+			       i\sqrt{2}\,\ov{\sigma\lambda}{}_L\lambda_R \big) }
+		{ \big|\sqrt{2}\sigma\big|^4 }\,
+	\frac{ \ln (1 + x) \,-\, x } { x^2 }\,.
+\end{align*}
+}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Truncation}
+
+	This action is not supersymmetric --- field $ D $ which is sitting in $ x $
+	effectively contains one space-time derivative, or two superspace derivatives
+\[
+	iD  ~~\in~~  \sqrt{2}\Sigma ~~=~~  \frac{i}{\sqrt 2}\, D_L\, \ov D{}_R\, V
+\]
+
+	So we to ``retain'' supersymmetry at the level of two space-time derivatives
+	we have to put $ D ~=~ 0 $ wherever there are already two derivatives
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{}
+
+	The result of this is 
+\begin{align*}
+%
+\notag
+	&     
+	~~-~~ iD\, \log |\sqrt{2}\sigma|^2  ~~-~~  \frac{1}{2}\, \frac{ \big(i D\big)^2 } { \big|\sqrt{2}\sigma\big|^2 }
+	~~-~~ F_{03}\, \log\, \frac{\sqrt{2}\sigma}{\sqrt{2}\ov\sigma}
+	~~+~~
+	\\[2mm]
+%
+\notag
+	&
+	~~+~~ \frac{
+		\big|\p_\mu \sigma\big|^2  ~+~  \frac{\displaystyle 1}{\displaystyle 2}\,F_{03}^2  ~+~
+		\frac{\displaystyle 1}{\displaystyle 2}\!
+			    \lgr\, \ov\lambda{}_R\, i\overleftrightarrow{\md_L} \lambda_R  ~+~ 
+				   \ov\lambda{}_L\, i\overleftrightarrow{\md_R} \lambda_L \rgr
+		} { \big|\sqrt{2}\sigma\big|^2 }
+	~~-~~
+	\\[2mm]
+%
+\notag
+	&
+	~~-~~ 2\,\frac{
+			i\sqrt{2}\sigma\ov\lambda{}_R\lambda_L  ~+~  
+			i\sqrt{2}\,\ov{\sigma\lambda}{}_L\lambda_R
+		} { \big|\sqrt{2}\sigma\big|^2 }
+	~~+~~ 2\, \frac{
+			\ov\lambda{}_R \lambda_L \ov\lambda{}_L \lambda_R
+		} { \big|\sqrt{2}\sigma\big|^4 }
+	~~+~~
+	\\[2mm]
+%
+\notag
+	&
+	~~+~~
+	\frac{	(iD + F_{03})\, i\sqrt{2}\sigma \ov\lambda{}_R\lambda_L ~+~
+		(iD - F_{03})\, i\sqrt{2}\,\ov{\sigma \lambda}{}_L\lambda_R  }
+		{ \big|\sqrt{2}\sigma\big|^4 }\,.
+\end{align*}
+
+	This matches the effective one-loop action calculated in {\sc M.Shifman, A.Yung arXiv:0803.0698}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Integrating $ D $}
+	Another question we can ask is what does the action look like if 
+	we leave only the physical fields --- $ A_k $, $ \sigma $ and $ \lambda $?\\[4mm]
+
+	To do that we must return to the expression with $ \log(1 + x) \,-\, x $,
+	and eliminate $ x $\\[4mm]
+
+	This is not possible to do exactly --- but again, we only need two 
+	space-time derivatives
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{}
+	\vskip -6mm
+{\footnotesize
+\begin{align*}
+%
+	& \frac{4\pi}{N}\, \cell_\text{two deriv}(\sigma, A_\mu, \lambda)    ~~=~~  
+	\\[2mm]
+%
+	& ~~=~~
+	\frac{ \big|\p_\mu \sigma\big|^2 } r
+	~~-~~
+	F_{03}\, \log\, \frac{\sqrt{2}\sigma}{\sqrt{2}\ov\sigma}
+	~~+~~
+	v_\text{eff}(r)
+	~~-
+	\\[2mm]
+%
+	&
+	~~+~~
+	2\, F_{03}^2
+	\lgr \frac{v_\text{eff}(r)}{(1 - r)^2}  ~-~  \frac{r}{4} \rgr
+	~~+~~
+	\lgr 
+		\ov\lambda{}_R\, i\overleftrightarrow{\md_L} \lambda_R  ~+~ 
+		\ov\lambda{}_L\, i\overleftrightarrow{\md_R} \lambda_L
+	\rgr
+	\frac{v_\text{eff}(r)}{(1 - r)^2}
+	~~+
+	\\[2mm]
+%
+	&
+	~~+~~ 
+	2 \lgr
+		i\sqrt{2}\sigma\ov\lambda{}_R\lambda_L  ~+~  
+		i\sqrt{2}\,\ov{\sigma\lambda}{}_L\lambda_R
+	\rgr
+	\frac{1 - r}{r}\, \ln r
+	~~-
+	\\[2mm]
+%
+	&
+	~~-~~
+	4\, \ov\lambda{}_R \lambda_L \ov\lambda{}_L \lambda_R
+	\lgr
+		\frac{v_\text{eff}(r)}{r\, (1 - r)^2}
+		~-~  \frac{1}{r}
+		~+~  \frac{r\, \big( 1 \,-\, r \,-\, \ln r \big)^2}{ (1 - r)^4 }
+	\rgr
+	~-
+	\\[2mm]
+%
+	&
+	~~-~~
+	\frac{1}{4}\,\Box\,\ln r
+	\lgr
+		\frac{r\, v_\text{eff}(r)}{(1 - r)^2}  ~-~  \ln r
+	\rgr
+	~~+
+	\\[2mm]
+%
+	&
+	~~+~~
+	2\, F_{03} \lgr 
+			i\sqrt{2}\sigma\ov\lambda{}_R\lambda_L ~-~
+			i\sqrt{2}\,\ov{\sigma\lambda}{}_L\lambda_R
+		   \rgr
+	\frac{v_\text{eff}(r)}{r\, (1 - r)^2}\,.
+\end{align*}
+	where $ r ~=~ \big|\sqrt{2}\sigma\big|^2 $ and
+$
+	v_\text{eff}(r)    ~~=~~    
+	\frac{\displaystyle 4\pi}{\displaystyle N}\, V_\text{eff}(\sigma)    ~~=~~    
+	r\, \ln r  ~~+~~  1  ~~-~~  r
+$
+}
+\end{frame}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Heterotic and Twisted mass deformations}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{}
+\usefont{T1}{ptm}{m}{n}\fontsize{60pt}{60pt}\selectfont
+\begin{center}
+        Heterotic and Massive deformations
+\end{center}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Heterotic deformation and Twisted masses}
+
+	Knowing the superfield form of the action it is straightforward
+	to include the twisted masses
+{\footnotesize
+\begin{align*}
+%
+	& 4\pi\, \cell    ~~=~~     
+			-\, \sum_k\, \Bigg\lgroup\,
+			\int\, d^4\theta\, \frac{1}{2}\, \Big| \ln \big(\sqrt{2}\Sigma \,-\, m_k \big)\, \Big|^2
+			~~+
+	\\[2mm]
+%
+			&
+			+~~
+			i\, \int\, d^2\tilde\theta 
+			\lgr
+			\big( \sqrt{2}\Sigma \,-\, m_k \big)\, \ln \big( \sqrt{2}\Sigma \,-\, m_k \big)  ~-~ 
+					\big( \sqrt{2}\Sigma \,-\, m_k \big)
+			\rgr \!\!
+			~~+
+	\\[2mm]
+%
+			&
+			+~~ 
+			\frac{1}{4}\, \int\, d^4\theta\, \ln\, \big( \sqrt{2}\ov\Sigma \,-\, \ov m{}_k \big)\, \times
+	\\[1mm]
+%
+			&
+			\qquad\qquad~
+			\times
+			\bigg\lgroup \Big( 1 \,+\, \frac{\sqrt{2}\Sigma \,-\, m_k}{S_k} \Big)^2\,
+				\ln \left(\, 1 \,+\, \frac{S_k}{\sqrt{2}\Sigma \,-\, m_k} \,\right) ~-~
+				\frac{\sqrt{2}\Sigma \,-\, m_k}{S_k} \bigg\rgroup \Bigg\rgroup \!\!
+			~~+
+	\\[2mm]
+%
+			&
+			+~~
+			4\pi\, \int\, d^2\theta_R\,\, \hzeta_R\, \hbzeta_R
+			~~-~~
+			4\pi i\, \int d\theta_R\,\, \hzeta\cdot J(\sqrt{2}\hsigma)
+			~~+~~
+			\text{h.c.}
+\end{align*}
+}
+	where
+{\footnotesize
+$
+	\hsigma(\upsilon)    ~~=~~    \sigma  ~~-~~  \sqrt{2}\,\theta_R\,\ov\lambda{}_L
+$
+}
+	and
+{\footnotesize
+$
+	\hz(\upsilon)    ~~=~~    z  ~~-~~  \sqrt{2}\,\theta_R\,\zeta_L\
+$
+}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{}
+
+\usefont{T1}{ptm}{m}{n}\fontsize{70pt}{70pt}\selectfont
+\begin{center}
+        Thank you
+\end{center}
+
+\end{frame}
+
+
+
+\end{document}
